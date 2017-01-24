@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .calendar {
+            width: 400px;
+        }
+
+        .days > div,
+        .month .day {
+            float: left;
+            width: 14.28%;
+            height: 30px;
+        }
+
+        .inactive {
+            background: grey;
+        }
+    </style>
 </head>
 <body>
     <div class="calendar">
         <div class="navigation">
-            <a href="#" class="prev">trug</a>
+            <a href="#" class="previous">trug</a>
             <span class="month-name"></span>
             <a href="#" class="next">volg</a>
+        </div>
+        <div class="days">
+            <div>ma</div>
+            <div>din</div>
+            <div>woe</div>
+            <div>don</div>
+            <div>vri</div>
+            <div>zat</div>
+            <div>zon</div>
         </div>
         <div class="months"></div>
     </div>
