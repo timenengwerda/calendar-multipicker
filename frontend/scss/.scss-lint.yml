@@ -1,0 +1,262 @@
+exclude:
+- '3rdparty/**'
+- 'mixins/**'
+
+# https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
+linters:
+  # bad : color: #000!important;
+  # good: color: #000 !important;
+  BangFormat:
+    enabled: true
+
+  # bad : border: none;
+  # good: border: 0;
+  BorderZero:
+    enabled: true
+
+  # bad : color: green;
+  # good: color: #0f0;
+  ColorKeyword:
+    enabled: true
+
+  # Prefer color literals (keywords or hexadecimal codes) to be used only in variable declarations. They should be referred to via variables everywhere else.
+  ColorVariable:
+    enabled: true
+
+  # bad : /* comment */
+  # good: // comment
+  Comment:
+    enabled: false
+
+  # Not used here
+  Compass Linters:
+    enabled: false
+
+  # reports @debug statements
+  DebugStatement:
+    enabled: true
+
+  # Rule sets should be ordered as follows: @extend declarations, @include declarations without inner @content,
+  # properties, @include declarations with inner @content, then nested rule sets.
+  DeclarationOrder:
+    enabled: true
+
+  # Reports when you define the same property twice in a single rule set.
+  DuplicateProperty:
+    enabled: true
+
+  # bad : ... \n } \n @else {
+  # good: ... \n } @else {
+  # good: @if { ... } @else { ... }
+  ElsePlacement:
+    enabled: true
+
+  # bad : no lines separating blocks
+  # good: lines separating blocks
+  EmptyLineBetweenBlocks:
+    enabled: true
+
+  # bad : empty rules
+  EmptyRule:
+    enabled: true
+
+  # Every file must end with an empty line
+  FinalNewline:
+    enabled: true
+
+  # style: long
+  #   bad : #fff
+  #   good: #ffffff
+  # style: short
+  #   bad : #ffffff
+  #   good: #fff
+  HexLength:
+    enabled: true
+    style: long
+
+  # style: lowercase
+  #   bad : #FFFFFF
+  #   good: #ffffff
+  # style: uppercase
+  #   bad : #ffffff
+  #   good: #FFFFFF
+  HexNotation:
+    enabled: true
+    style: lowercase
+
+  # bad : #ab <- clearly wrong
+  # good: #abc
+  HexValidation:
+    enabled: true
+
+  # bad : #submit-button
+  # good: .submit-button
+  IdSelector:
+    enabled: true
+
+  # Avoid using !important in properties. It is usually indicative of a misunderstanding of CSS specificity and can lead to brittle code.
+  ImportantRule:
+    enabled: true
+
+  # The basenames of @imported SCSS partials should not begin with an underscore and should not include the filename
+  # extension.
+  # bad : @import "foo/_bar.scss"; @import "_bar.scss"; @import "_bar"; @import "bar.scss";
+  # good: @import "foo/bar"; @import "bar";
+  ImportPath:
+    enabled: true
+
+  # bad : <space><space>var: {  || <tab>var: {
+  # good: <space><space><space><space>var: {
+  Indentation:
+    enabled: true
+    width: 4
+    character: space
+
+  # bad : margin: 0.5em;
+  # good: margin: .5em;
+  LeadingZero:
+    enabled: true
+
+  # Reports when you define the same selector twice in a single sheet (for example a second h1).
+  MergeableSelector:
+    enabled: false
+
+  # bad : $myVar
+  # good: $my-var
+  NameFormat:
+    enabled: false
+
+  # Avoid nesting selectors too deeply.
+  NestingDepth:
+    enabled: true
+    max_depth: 3
+
+
+  # bad : @extend .error;
+  # good: @extend %error;
+  PlaceholderInExtend:
+    enabled: true
+
+  # Sort properties in a strict order. By default, will require properties be sorted in alphabetical order, as it's
+  # brain dead simple (highlight lines and execute :sort in vim), and it can benefit gzip compression.
+  PropertySortOrder:
+    enabled: false
+
+  # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
+  PropertySpelling:
+    enabled: true
+
+  # bad : ul.list
+  # good: .list
+  QualifyingElement:
+    enabled: false
+
+  # Don't write selectors with a depth of applicability greater than 3.
+  # bad : .one .two .three > .four
+  SelectorDepth:
+    enabled: false
+    max_depth: 3
+
+  # bad : .myClasName .my_class_name
+  # good: .my-class-name
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase
+
+  # bad : margin: 1px 1px 1px 1px;
+  # good: margin: 1px;
+  Shorthand:
+    enabled: true
+
+  # bad : p { \n margin: 0; padding: 0; \n }
+  # good: p { \n margin: 0; \n padding: 0; \n }
+  # good: p { margin: 0; padding: 0; }
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: true
+
+  # bad : .error p, p.explanation {
+  # good: .error p, \n p.explanation {
+  SingleLinePerSelector:
+    enabled: true
+
+  # bad : color: rgba(0,0,0,.1);
+  # good: color: rgba(0, 0, 0, .1);
+  SpaceAfterComma:
+    enabled: true
+
+  # bad : margin:0;
+  # good: margin: 0; margin:   0;
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space
+
+  # bad : margin : 0;
+  # good: margin: 0;
+  SpaceAfterPropertyName:
+    enabled: true
+
+  # bad : p{
+  # good: p {
+  SpaceBeforeBrace:
+    enabled: true
+
+  # bad : @include box-shadow( 0 2px 2px rgba( 0, 0, 0, .2 ) );
+  # good: @include box-shadow(0 2px 2px rgba(0, 0, 0, .2));
+  SpaceBetweenParens:
+    enabled: false
+
+  # bad : content: "hello";
+  # good: content: 'hello'; content: "'hello'";
+  StringQuotes:
+    enabled: true
+    style: single_quotes
+
+  # bad : color: #fff ; color: #fff
+  # good: color: #fff;
+  TrailingSemicolon:
+    enabled: true
+
+  # bad : margin: .500em;
+  # good: margin: .5em;
+  TrailingZero:
+    enabled: true
+
+  # bad : margin: 1.0em;
+  # good: margin: 1em;
+  UnnecessaryMantissa:
+    enabled: true
+
+  # bad : .foo { & > .bar { } }
+  # good: .foo { > .bar { } }
+  UnnecessaryParentReference:
+    enabled: true
+
+  # bad : background: url('https://example.com/assets/image.png');
+  # good: background: url('assets/image.png');
+  UrlFormat:
+    enabled: true
+
+  # bad : background: url(example.png);
+  # good: background: url('example.png');
+  UrlQuotes:
+    enabled: true
+
+  # bad : usage of -moz- or -webkit- ect
+  # <= scss-lint-0.34.0
+  VendorPrefixes:
+    enabled: false # Seems like we still use -webkit-, for safari probably
+
+  # bad : usage of -moz- or -webkit- ect
+  # NOTE: By issuing a provision the underlying scss-lint gem will update to 0.35.0 which
+  #   has a configname change which will result in a BC break
+  #   So for now we add both confignames, but yeah it's an unwanted situation since we want
+  #   to control the updates ourselves.
+  # >= scss-lint-0.35.0
+  VendorPrefix:
+    enabled: false # Seems like we still use -webkit-, for safari probably
+
+  # bad : margin: 0px;
+  # good: margin: 0;
+  ZeroUnit:
+    enabled: true

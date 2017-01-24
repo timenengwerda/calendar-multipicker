@@ -1,0 +1,31 @@
+{
+  "name": "masoutreach.projecttemplate",
+  "version": "1.0.0",
+  "description": "* All code comments in English (US)\r * For every new feature/change, create a new branch (Git Flow!)\r * Never develop in the master-branch!\r * Use 4 spaces instead of tabs\r * End each file with a newline",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "author": "Masoutreach",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "browser-sync": "^2.18.5",
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-kit": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-uglify": "^2.0.0",
+    "moment": "^2.17.1",
+    "require-dir": "^0.3.0"
+  }
+}
