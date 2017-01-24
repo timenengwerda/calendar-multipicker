@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Gulp ###
 
 This project uses Gulp. The following commands are available:
@@ -20,3 +21,6 @@ This project uses Gulp. The following commands are available:
 
 * http://nvie.com/posts/a-successful-git-branching-model/
 * http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline
+=======
+# calendar-multipicker
+>>>>>>> 2fa1fb924f2e59f4eab443152b342d12ee66b1f0
