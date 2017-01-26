@@ -1,0 +1,71 @@
+.calendar {
+    width: 600px;
+
+    .days {
+        height: 30px;
+    }
+
+    .days > div,
+    .month .day {
+        box-sizing: border-box;
+        float: left;
+        width: 14.28%;
+        height: 50px;
+    }
+
+    $border: 1px solid grey;
+    .months {
+        border-top: $border;
+        border-left: $border;
+        position: relative;
+        width: 100%;
+    }
+
+    .month {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: none;
+        background: #FFF;
+    }
+
+    .day {
+        border-right: $border;
+        border-bottom: $border;
+    }
+
+    .prev-month,
+    .inactive {
+        color: #ccc;
+    }
+
+    .prev-month {
+        background: #eee;
+    }
+
+    .next-month {
+        background: #aaa;
+    }
+
+    .selected {
+        background-color: lightgreen;
+    }
+
+    .navigation {
+        height: 30px;
+
+        a,
+        span {
+            display: block;
+            width: 25%;
+            float: left;
+        }
+
+        span {
+            width: 50%;
+        }
+    }
+}
